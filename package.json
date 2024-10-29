@@ -1,0 +1,17 @@
+{
+  "name": "yellowtaxitrip-dashboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm run dev --prefix frontend",
+    "api": "npm run start:dev --prefix backend",
+    "dev": "concurrently \"npm run client\" \"npm run api\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "A full-stack project for Test Case",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
