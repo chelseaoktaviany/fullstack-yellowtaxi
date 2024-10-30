@@ -43,10 +43,7 @@ const TripTable = () => {
                 <td>{item.vendor_id}</td>
                 <td>{new Date(item.pickup_datetime).toLocaleString()}</td>
                 <td>{new Date(item.dropoff_datetime).toLocaleString()}</td>
-                <td>
-                  [{item.pickup_longitude}, {item.pickup_latitude}], [
-                  {item.dropoff_longitude},{item.dropoff_latitude}]
-                </td>
+                <td>{item.trip_distance}</td>
                 <td>{item.payment_type}</td>
                 <td>{item.fare_amount}</td>
               </tr>
