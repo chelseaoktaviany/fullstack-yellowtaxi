@@ -23,6 +23,7 @@ const port = process.env.PORT || 3000;
 app.use("/api/trips", tripRouter);
 
 app.get("/", (req, res) => {
+  res.status(200).send("Welcome to Yellow Taxi Trip API");
   res.status(200).json({ isSuccess: true, msg: "Test" });
 });
 
