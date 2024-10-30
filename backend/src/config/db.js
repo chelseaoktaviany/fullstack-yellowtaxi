@@ -11,6 +11,7 @@ const sequelize = new Sequelize(
     logging: console.log,
     host: process.env.PSQL_LOCALHOST,
     dialect: "postgres",
+    dialectModule: require("pg"),
   }
 );
 
