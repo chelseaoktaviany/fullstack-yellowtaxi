@@ -1,5 +1,4 @@
 {
   "version": 2,
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
-  "routes": [{ "src": "/(.)", "dest": "src/server.js" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
