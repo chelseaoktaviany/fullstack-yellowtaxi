@@ -1,25 +1,19 @@
 const { Trips } = require("../models");
 
 exports.getAllTrip = async (req, res) => {
-  // try {
-  //   const trips = await Trips.findAll();
-  //   res.status(200).json({
-  //     isSuccess: true,
-  //     data: trips,
-  //   });
-  // } catch (err) {
-  //   console.error(err);
-  //   res.status(500).json({
-  //     isSuccess: false,
-  //     msg: "Failed to get all trips' data",
-  //   });
-  // }
-
-  const trips = await Trips.findAll();
-  res.status(200).json({
-    isSuccess: true,
-    data: trips,
-  });
+  try {
+    const trips = await Trips.findAll();
+    res.status(200).json({
+      isSuccess: true,
+      data: trips,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      isSuccess: false,
+      msg: "Failed to get all trips' data",
+    });
+  }
 };
 
 exports.getTrip = async (req, res) => {
