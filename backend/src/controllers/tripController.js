@@ -25,7 +25,7 @@ exports.getTrip = async (req, res) => {
     if (trip) {
       res.status(200).json({
         isSuccess: true,
-        data: result,
+        data: trip,
       });
     } else {
       res.status(404).json({
