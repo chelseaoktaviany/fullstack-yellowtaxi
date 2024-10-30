@@ -28,6 +28,7 @@
 - If the CSV file is imported successfully, fill the following value with the `.env.sample` file and change file name to `.env`
 
   ```
+  PORT=3000
   PSQL_LOCALHOST=localhost
   PSQL_HOST=127.0.0.1
   PSQL_USER=postgres
