@@ -8,6 +8,7 @@ module.exports = {
     database: process.env.PSQL_DB,
     host: String(process.env.PSQL_HOST),
     dialect: "postgres",
+    dialectModule: require("pg"),
   },
   production: {
     username: process.env.DB_USER,
@@ -15,5 +16,6 @@ module.exports = {
     database: process.env.PSQL_DB,
     host: String(process.env.PSQL_HOST),
     dialect: "postgres",
+    dialectModule: require("pg"),
   },
 };
