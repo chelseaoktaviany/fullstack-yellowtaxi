@@ -8,5 +8,6 @@ module.exports = {
     database: process.env.PSQL_DB,
     host: String(process.env.PSQL_HOST),
     dialect: "postgres",
+    dialectModule: require("pg"),
   },
 };
