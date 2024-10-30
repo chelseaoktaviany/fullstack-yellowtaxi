@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "client:prod": "npm run preview --prefix frontend",
-    "api:prod": "npm run start:dev --prefix backend",
+    "api:prod": "npm run start:prod --prefix backend",
     "prod": "concurrently \"npm run client:prod\" \"npm run api:prod\""
   },
   "keywords": [],
