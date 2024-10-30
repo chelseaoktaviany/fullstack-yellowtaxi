@@ -17,27 +17,43 @@ exports.getAllTrip = async (req, res) => {
 };
 
 exports.getTrip = async (req, res) => {
-  try {
-    const { id } = req.params;
+  // try {
+  //   const { id } = req.params;
 
-    const trip = await Trips.findByPk(id);
+  //   const trip = await Trips.findByPk(id);
 
-    if (trip) {
-      res.status(200).json({
-        isSuccess: true,
-        data: trip,
-      });
-    } else {
-      res.status(404).json({
-        isSuccess: false,
-        msg: "Trip not found",
-      });
-    }
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({
+  //   if (trip) {
+  //     res.status(200).json({
+  //       isSuccess: true,
+  //       data: trip,
+  //     });
+  //   } else {
+  //     res.status(404).json({
+  //       isSuccess: false,
+  //       msg: "Trip not found",
+  //     });
+  //   }
+  // } catch (err) {
+  //   console.error(err);
+  //   res.status(500).json({
+  //     isSuccess: false,
+  //     msg: "Failed to get a trip data",
+  //   });
+  // }
+
+  const { id } = req.params;
+
+  const trip = await Trips.findByPk(id);
+
+  if (trip) {
+    res.status(200).json({
+      isSuccess: true,
+      data: trip,
+    });
+  } else {
+    res.status(404).json({
       isSuccess: false,
-      msg: "Failed to get a trip data",
+      msg: "Trip not found",
     });
   }
 };
